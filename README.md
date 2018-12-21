@@ -11,6 +11,9 @@
 1. Segger Embedded Studio [https://www.segger.com/downloads/embedded-studio](https://www.segger.com/downloads/embedded-studio) 
 2. MDK Keil [https://www.keil.com/download/product/](https://www.keil.com/download/product/)
 
+## 文档
+  ![文档](/ZJ_TOOLS/image/caomengde/文档.png) 
+  
 ## 硬件平台 NORDIC nrf52840
   ![产品图片1](/ZJ_TOOLS/image/caomengde/正面2.png) 
   ![产品图片2](/ZJ_TOOLS/image/caomengde/正面.png) 
