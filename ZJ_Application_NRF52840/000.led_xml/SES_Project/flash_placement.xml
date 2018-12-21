@@ -1,0 +1,37 @@
+<!DOCTYPE Linker_Placement_File>  //文件类型
+<Root name="Flash Section Placement"> //根开始
+  <MemorySegment name="FLASH" start="$(FLASH_PH_START)" size="$(FLASH_PH_SIZE)"> 
+  //第一个存储段，名字是flash，起始地址是符号FLASH_PH_START，大小为符号FLASH_PH_SIZE
+    <ProgramSection alignment="0x100" load="Yes" name=".vectors" start="$(FLASH_START)" />
+	//中断向量段，256字节对齐，这里强制指定起始地址为FLASH_START，也就是falsh的起始地址，这里需要加载，
+	//实际上是无法加载的，因为RAM中没有对应的段空间给他，
+	//在代码中对应的符号是__vectors_start__、__vectors_end__和__vectors_load_end__
+    <ProgramSection alignment="4" load="Yes" name=".init" /> 
+	//初始化段，起始地址是紧跟在__vectors_end__之后，4字节对齐，虽然需要加载，但是同样的加载会失败，
+	//在代码中对应的符号有__init_start__、__init_end__和__text_load_end__
+    <ProgramSection alignment="4" load="Yes" name=".text" /> 
+	//代码段，起始地址紧跟着__init_end__，
+	//代码中对应的符号有__text_start__、__text_end__和__text_load_end__
+    <ProgramSection alignment="4" load="Yes" name=".rodata" /> 
+	//只读数据段、起始地址紧跟着__text_end__，
+	//代码中对应的符号有__rodata_start__、__rodata_end__和__rodata_load_end__
+    <ProgramSection alignment="4" load="Yes" runin=".data_ram" name=".data" /> 
+	//数据段、起始地址紧跟着__rodata_end__，并且这个能成功加载到RAM中，
+	//并且会加载到RAM中名为".data_ram"的段，
+	//在代码中对应的符号有__data_start__、__data_load_start__ 和__data_end__
+  </MemorySegment> //flash段结束
+  <MemorySegment name="RAM" start="$(RAM_PH_START)" size="$(RAM_PH_SIZE)">
+  //第二个存储段，名字为RAM，起始地址是符号RAM_PH_START，大小是符号RAM_PH_SIZE
+    <ProgramSection alignment="4" load="No" name=".data_ram" />
+	//数据段，用来存放从falsh中拷贝过来的数据段，不需要加载
+	//在代码中对应的符号有__data_ram_start__、__data_ram_end__ 和__data_ram_load_end__
+    <ProgramSection alignment="4" load="No" name=".bss" />
+	//BBS段，这段内存用来存放全局未定义的变量，在进入main函数之前这段内存进行清零，不需要加载
+	//在代码中对应的符号有__bss_start__、__bss_end__和__bss_load_end__
+    <ProgramSection alignment="8" size="__STACKSIZE__" load="No" place_from_segment_end="Yes" name=".stack"/>
+	//栈段，8字节对齐，长度为符号__STACKSIZE__，不需要加载，同时访问从结束地址开始，
+	//在代码中对应的符号有__stack_start__、__stack_end__和__stack_load_end__
+  </MemorySegment>//ram段结束
+</Root>
+
+
