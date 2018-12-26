@@ -1,6 +1,5 @@
 #ifndef RT_NRF_HAL_IIC__
 #define RT_NRF_HAL_IIC__
-#include "nrf_drv_qspi.h"
 #include "nrf_gpio.h"
 
 
