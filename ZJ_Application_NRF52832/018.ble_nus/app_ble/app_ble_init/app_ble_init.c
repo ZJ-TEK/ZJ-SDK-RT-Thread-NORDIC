@@ -502,7 +502,7 @@ void app_ble_init(void)
     advertising_init();
     conn_params_init();
 
-    rt_kprintf("RT-Thread for nrf52840 started.\r\n");
+    rt_kprintf("RT-Thread for nrf52832 started.\r\n");
     // Create a RT-Thread task for the BLE stack.
     // The task will run advertising_start() before entering its loop.
     nrf_sdh_rtthread_init(advertising_start, NULL);

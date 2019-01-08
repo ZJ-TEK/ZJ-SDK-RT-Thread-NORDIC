@@ -13,7 +13,7 @@ int main(void)
 {
     app_ble_init();
     APP_EVENT_PUSH_DELAY(led_event_start,NULL,500);
-    NRF_LOG_INFO("RT-Thread for nrf52840 started");
+    NRF_LOG_INFO("RT-Thread for nrf52832 started");
     return RT_TRUE;
 }
 
