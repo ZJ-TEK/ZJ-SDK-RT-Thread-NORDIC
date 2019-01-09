@@ -70,10 +70,10 @@ static void segger_rtt_tx(char const * buffer, size_t len)
     {
         uint32_t idx = 0;
         uint32_t processed;
-        uint32_t watchdog_counter = NRF_LOG_BACKEND_RTT_TX_RETRY_CNT;
         do
         {
             SEGGER_RTT_SetTerminal(0);
+            SEGGER_RTT_WriteString(0,RTT_CTRL_TEXT_BRIGHT_YELLOW);
             processed = SEGGER_RTT_WriteNoLock(0, &buffer[idx], len);
             idx += processed;
             len -= processed;
@@ -91,10 +91,8 @@ static int segger_putc(struct rt_serial_device *serial, char c)
     rtt_UpBuffer[up_index] = c;
     up_index++;
     
-    SEGGER_RTT_SetTerminal(0);
     if(rtt_UpBuffer[up_index-1] == '\n')
     {
-      SEGGER_RTT_WriteString(0,RTT_CTRL_TEXT_BRIGHT_YELLOW);
       segger_rtt_tx(rtt_UpBuffer,up_index);
       up_index =0;
     }
