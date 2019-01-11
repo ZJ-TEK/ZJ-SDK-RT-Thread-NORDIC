@@ -335,7 +335,7 @@
               <MiscControls>--reduce_paths</MiscControls>
               <Define>APP_ENTRY_POINT=entry FLOAT_ABI_HARD CONFIG_GPIO_AS_PINRESET NRF52840_XXAA NRF_SD_BLE_API_VERSION=6  S140 SOFTDEVICE_PRESENT</Define>
               <Undefine></Undefine>
-              <IncludePath>../../../RT_THREAD/include;../../../RT_THREAD/libcpu/arm/cortex-m4;../../../RT_THREAD/libcpu/arm/common;../../../RT_THREAD/components/finsh;../../../RT_THREAD/components/drivers/include;../../../NORDIC_SDK/components;../../../NORDIC_SDK/components/ble/ble_advertising;../../../NORDIC_SDK/components/ble/ble_link_ctx_manager;../../../NORDIC_SDK/components/ble/ble_services/ble_nus;../../../NORDIC_SDK/components/ble/common;../../../NORDIC_SDK/components/ble/nrf_ble_gatt;../../../NORDIC_SDK/components/ble/nrf_ble_qwr;../../../NORDIC_SDK/components/ble/peer_manager;../../../NORDIC_SDK/components/libraries/atomic;../../../NORDIC_SDK/components/libraries/atomic_fifo;../../../NORDIC_SDK/components/libraries/atomic_flags;../../../NORDIC_SDK/components/libraries/balloc;../../../NORDIC_SDK/components/libraries/experimental_log;../../../NORDIC_SDK/components/libraries/experimental_log/src;../../../NORDIC_SDK/components/libraries/experimental_memobj;../../../NORDIC_SDK/components/libraries/experimental_section_vars;../../../NORDIC_SDK/components/libraries/fds;../../../NORDIC_SDK/components/libraries/fstorage;../../../NORDIC_SDK/components/libraries/hardfault;../../../NORDIC_SDK/components/libraries/hci;../../../NORDIC_SDK/components/libraries/low_power_pwm;../../../NORDIC_SDK/components/libraries/strerror;../../../NORDIC_SDK/components/libraries/uart;../../../NORDIC_SDK/components/libraries/util;../../../NORDIC_SDK/components/softdevice/common;../../../NORDIC_SDK/components/softdevice/s140/headers;../../../NORDIC_SDK/components/softdevice/s140/headers/nrf52;../../../NORDIC_SDK/components/toolchain/cmsis/include;../../../NORDIC_SDK/integration/nrfx;../../../NORDIC_SDK/integration/nrfx/legacy;../../../NORDIC_SDK/modules/nrfx;../../../NORDIC_SDK/modules/nrfx/hal;../../../NORDIC_SDK/modules/nrfx/mdk;../../../NORDIC_SDK/modules/nrfx/drivers/include;../../../NORDIC_SDK/external/fprintf;../../../NORDIC_SDK/external/segger_rtt;../../../RT_THREAD_NRF_HAL/include;../config;../RT_Thread_Startup;../applications/app_init;../applications/app_gpio;../applications/app_event;../applications/app_qspi;../app_ble/app_ble_init;../NORDIC_SDK/components/libraries/timer;../startups</IncludePath>
+              <IncludePath>../../../RT_THREAD/include;../../../RT_THREAD/libcpu/arm/cortex-m4;../../../RT_THREAD/libcpu/arm/common;../../../RT_THREAD/components/finsh;../../../RT_THREAD/components/drivers/include;../../../NORDIC_SDK/components;../../../NORDIC_SDK/components/ble/ble_advertising;../../../NORDIC_SDK/components/ble/ble_link_ctx_manager;../../../NORDIC_SDK/components/ble/ble_services/ble_nus;../../../NORDIC_SDK/components/ble/common;../../../NORDIC_SDK/components/ble/nrf_ble_gatt;../../../NORDIC_SDK/components/ble/nrf_ble_qwr;../../../NORDIC_SDK/components/ble/peer_manager;../../../NORDIC_SDK/components/libraries/atomic;../../../NORDIC_SDK/components/libraries/atomic_fifo;../../../NORDIC_SDK/components/libraries/atomic_flags;../../../NORDIC_SDK/components/libraries/balloc;../../../NORDIC_SDK/components/libraries/experimental_log;../../../NORDIC_SDK/components/libraries/experimental_log/src;../../../NORDIC_SDK/components/libraries/experimental_memobj;../../../NORDIC_SDK/components/libraries/experimental_section_vars;../../../NORDIC_SDK/components/libraries/fds;../../../NORDIC_SDK/components/libraries/fstorage;../../../NORDIC_SDK/components/libraries/hardfault;../../../NORDIC_SDK/components/libraries/hci;../../../NORDIC_SDK/components/libraries/low_power_pwm;../../../NORDIC_SDK/components/libraries/strerror;../../../NORDIC_SDK/components/libraries/uart;../../../NORDIC_SDK/components/libraries/util;../../../NORDIC_SDK/components/libraries/timer;..\..\..\NORDIC_SDK\components\libraries\crc32;../../../NORDIC_SDK/components/softdevice/common;../../../NORDIC_SDK/components/softdevice/s140/headers;../../../NORDIC_SDK/components/softdevice/s140/headers/nrf52;../../../NORDIC_SDK/components/toolchain/cmsis/include;../../../NORDIC_SDK/integration/nrfx;../../../NORDIC_SDK/integration/nrfx/legacy;../../../NORDIC_SDK/modules/nrfx;../../../NORDIC_SDK/modules/nrfx/hal;../../../NORDIC_SDK/modules/nrfx/mdk;../../../NORDIC_SDK/modules/nrfx/drivers/include;../../../NORDIC_SDK/external/fprintf;../../../NORDIC_SDK/external/segger_rtt;../../../RT_THREAD_NRF_HAL/include;../config;../RT_Thread_Startup;../applications/app_init;../applications/app_gpio;../applications/app_event;../applications/app_qspi;../app_ble/app_conn_params;../app_ble/app_ble_init;..\app_ble\app_ble_adv;../startups;..\bsp_driver\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -377,6 +377,36 @@
       </TargetOption>
       <Groups>
         <Group>
+          <GroupName>App_ble</GroupName>
+          <Files>
+            <File>
+              <FileName>app_ble_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../app_ble/app_ble_init/app_ble_init.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_ble_adv.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app_ble\app_ble_adv\app_ble_adv.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_conn_params.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../app_ble/app_conn_params/app_conn_params.c</FilePath>
+            </File>
+            <File>
+              <FileName>sdk_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>../config/sdk_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>rtconfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>../config/rtconfig.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Application</GroupName>
           <Files>
             <File>
@@ -400,11 +430,6 @@
               <FilePath>../applications/app_gpio/app_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>app_qspi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../applications/app_qspi/app_qspi.c</FilePath>
-            </File>
-            <File>
               <FileName>rtconfig.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\config\rtconfig.h</FilePath>
@@ -413,26 +438,6 @@
               <FileName>sdk_config.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\config\sdk_config.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>App_ble</GroupName>
-          <Files>
-            <File>
-              <FileName>sdk_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>../config/sdk_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>app_ble_init.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../app_ble/app_ble_init/app_ble_init.c</FilePath>
-            </File>
-            <File>
-              <FileName>rtconfig.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>../config/rtconfig.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -448,6 +453,31 @@
               <FileName>arm_startup_nrf52840.s</FileName>
               <FileType>2</FileType>
               <FilePath>..\..\..\NORDIC_SDK\modules\nrfx\mdk\arm_startup_nrf52840.s</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP_Driver</GroupName>
+          <Files>
+            <File>
+              <FileName>bsp_qspi_dri.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp_driver\src\bsp_qspi_dri.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_lcd_ie3130b_dri.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp_driver\src\bsp_lcd_ie3130b_dri.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_eeprom_dri.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp_driver\src\bsp_eeprom_dri.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_adc_dri.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp_driver\src\bsp_adc_dri.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -493,6 +523,11 @@
               <FileName>app_error_handler_keil.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../NORDIC_SDK/components/libraries/util/app_error_handler_keil.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_timer_rtthread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../NORDIC_SDK/components/libraries/timer/app_timer_rtthread.c</FilePath>
             </File>
             <File>
               <FileName>app_error_weak.c</FileName>
@@ -575,9 +610,9 @@
               <FilePath>../../../NORDIC_SDK/components/libraries/experimental_section_vars/nrf_section_iter.c</FilePath>
             </File>
             <File>
-              <FileName>app_timer_rtthread.c</FileName>
+              <FileName>crc32.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\NORDIC_SDK\components\libraries\timer\app_timer_rtthread.c</FilePath>
+              <FilePath>..\..\..\NORDIC_SDK\components\libraries\crc32\crc32.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -598,6 +633,26 @@
               <FileName>nrfx_qspi.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../NORDIC_SDK/modules/nrfx/drivers/src/nrfx_qspi.c</FilePath>
+            </File>
+            <File>
+              <FileName>nrfx_spim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\NORDIC_SDK\modules\nrfx\drivers\src\nrfx_spim.c</FilePath>
+            </File>
+            <File>
+              <FileName>nrf_drv_twi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\NORDIC_SDK\integration\nrfx\legacy\nrf_drv_twi.c</FilePath>
+            </File>
+            <File>
+              <FileName>nrfx_twim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\NORDIC_SDK\modules\nrfx\drivers\src\nrfx_twim.c</FilePath>
+            </File>
+            <File>
+              <FileName>nrfx_saadc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\NORDIC_SDK\modules\nrfx\drivers\src\nrfx_saadc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -658,11 +713,6 @@
               <FileName>nrf_ble_qwr.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../NORDIC_SDK/components/ble/nrf_ble_qwr/nrf_ble_qwr.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_conn_params.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../NORDIC_SDK/components/ble/common/ble_conn_params.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -834,6 +884,16 @@
               <FileType>1</FileType>
               <FilePath>../../../RT_THREAD/components/drivers/misc/pin.c</FilePath>
             </File>
+            <File>
+              <FileName>i2c_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\RT_THREAD\components\drivers\i2c\i2c_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c_dev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\RT_THREAD\components\drivers\i2c\i2c_dev.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -933,6 +993,11 @@
               <FileName>rt_nrf_hal_gpio.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../RT_THREAD_NRF_HAL/src/rt_nrf_hal_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>rt_nrf_hal_iic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\RT_THREAD_NRF_HAL\src\rt_nrf_hal_iic.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1309,6 +1374,104 @@
       </TargetOption>
       <Groups>
         <Group>
+          <GroupName>App_ble</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <uClangAs>2</uClangAs>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>app_ble_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../app_ble/app_ble_init/app_ble_init.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_ble_adv.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app_ble\app_ble_adv\app_ble_adv.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_conn_params.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../app_ble/app_conn_params/app_conn_params.c</FilePath>
+            </File>
+            <File>
+              <FileName>sdk_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>../config/sdk_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>rtconfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>../config/rtconfig.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Application</GroupName>
           <GroupOption>
             <CommonProperty>
@@ -1400,11 +1563,6 @@
               <FilePath>../applications/app_gpio/app_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>app_qspi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../applications/app_qspi/app_qspi.c</FilePath>
-            </File>
-            <File>
               <FileName>rtconfig.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\config\rtconfig.h</FilePath>
@@ -1413,94 +1571,6 @@
               <FileName>sdk_config.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\config\sdk_config.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>App_ble</GroupName>
-          <GroupOption>
-            <CommonProperty>
-              <UseCPPCompiler>0</UseCPPCompiler>
-              <RVCTCodeConst>0</RVCTCodeConst>
-              <RVCTZI>0</RVCTZI>
-              <RVCTOtherData>0</RVCTOtherData>
-              <ModuleSelection>0</ModuleSelection>
-              <IncludeInBuild>0</IncludeInBuild>
-              <AlwaysBuild>2</AlwaysBuild>
-              <GenerateAssemblyFile>2</GenerateAssemblyFile>
-              <AssembleAssemblyFile>2</AssembleAssemblyFile>
-              <PublicsOnly>2</PublicsOnly>
-              <StopOnExitCode>11</StopOnExitCode>
-              <CustomArgument></CustomArgument>
-              <IncludeLibraryModules></IncludeLibraryModules>
-              <ComprImg>1</ComprImg>
-            </CommonProperty>
-            <GroupArmAds>
-              <Cads>
-                <interw>2</interw>
-                <Optim>0</Optim>
-                <oTime>2</oTime>
-                <SplitLS>2</SplitLS>
-                <OneElfS>2</OneElfS>
-                <Strict>2</Strict>
-                <EnumInt>2</EnumInt>
-                <PlainCh>2</PlainCh>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <wLevel>0</wLevel>
-                <uThumb>2</uThumb>
-                <uSurpInc>2</uSurpInc>
-                <uC99>2</uC99>
-                <useXO>2</useXO>
-                <v6Lang>0</v6Lang>
-                <v6LangP>0</v6LangP>
-                <vShortEn>2</vShortEn>
-                <vShortWch>2</vShortWch>
-                <v6Lto>2</v6Lto>
-                <v6WtE>2</v6WtE>
-                <v6Rtti>2</v6Rtti>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Cads>
-              <Aads>
-                <interw>2</interw>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <thumb>2</thumb>
-                <SplitLS>2</SplitLS>
-                <SwStkChk>2</SwStkChk>
-                <NoWarn>2</NoWarn>
-                <uSurpInc>2</uSurpInc>
-                <useXO>2</useXO>
-                <uClangAs>2</uClangAs>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Aads>
-            </GroupArmAds>
-          </GroupOption>
-          <Files>
-            <File>
-              <FileName>sdk_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>../config/sdk_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>app_ble_init.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../app_ble/app_ble_init/app_ble_init.c</FilePath>
-            </File>
-            <File>
-              <FileName>rtconfig.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>../config/rtconfig.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1584,6 +1654,99 @@
               <FileName>arm_startup_nrf52840.s</FileName>
               <FileType>2</FileType>
               <FilePath>..\..\..\NORDIC_SDK\modules\nrfx\mdk\arm_startup_nrf52840.s</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP_Driver</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <uClangAs>2</uClangAs>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>bsp_qspi_dri.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp_driver\src\bsp_qspi_dri.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_lcd_ie3130b_dri.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp_driver\src\bsp_lcd_ie3130b_dri.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_eeprom_dri.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp_driver\src\bsp_eeprom_dri.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_adc_dri.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp_driver\src\bsp_adc_dri.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1767,6 +1930,11 @@
               <FilePath>../../../NORDIC_SDK/components/libraries/util/app_error_handler_keil.c</FilePath>
             </File>
             <File>
+              <FileName>app_timer_rtthread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../NORDIC_SDK/components/libraries/timer/app_timer_rtthread.c</FilePath>
+            </File>
+            <File>
               <FileName>app_error_weak.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../NORDIC_SDK/components/libraries/util/app_error_weak.c</FilePath>
@@ -1847,9 +2015,9 @@
               <FilePath>../../../NORDIC_SDK/components/libraries/experimental_section_vars/nrf_section_iter.c</FilePath>
             </File>
             <File>
-              <FileName>app_timer_rtthread.c</FileName>
+              <FileName>crc32.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\NORDIC_SDK\components\libraries\timer\app_timer_rtthread.c</FilePath>
+              <FilePath>..\..\..\NORDIC_SDK\components\libraries\crc32\crc32.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1938,6 +2106,26 @@
               <FileName>nrfx_qspi.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../NORDIC_SDK/modules/nrfx/drivers/src/nrfx_qspi.c</FilePath>
+            </File>
+            <File>
+              <FileName>nrfx_spim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\NORDIC_SDK\modules\nrfx\drivers\src\nrfx_spim.c</FilePath>
+            </File>
+            <File>
+              <FileName>nrf_drv_twi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\NORDIC_SDK\integration\nrfx\legacy\nrf_drv_twi.c</FilePath>
+            </File>
+            <File>
+              <FileName>nrfx_twim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\NORDIC_SDK\modules\nrfx\drivers\src\nrfx_twim.c</FilePath>
+            </File>
+            <File>
+              <FileName>nrfx_saadc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\NORDIC_SDK\modules\nrfx\drivers\src\nrfx_saadc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2134,11 +2322,6 @@
               <FileName>nrf_ble_qwr.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../NORDIC_SDK/components/ble/nrf_ble_qwr/nrf_ble_qwr.c</FilePath>
-            </File>
-            <File>
-              <FileName>ble_conn_params.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../NORDIC_SDK/components/ble/common/ble_conn_params.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2718,6 +2901,16 @@
               <FileType>1</FileType>
               <FilePath>../../../RT_THREAD/components/drivers/misc/pin.c</FilePath>
             </File>
+            <File>
+              <FileName>i2c_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\RT_THREAD\components\drivers\i2c\i2c_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c_dev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\RT_THREAD\components\drivers\i2c\i2c_dev.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -2953,6 +3146,11 @@
               <FileName>rt_nrf_hal_gpio.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../RT_THREAD_NRF_HAL/src/rt_nrf_hal_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>rt_nrf_hal_iic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\RT_THREAD_NRF_HAL\src\rt_nrf_hal_iic.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -9,7 +9,6 @@
 
 #define RT_GPIO_MODE_SET(polarity,sense)   (((polarity << RT_GPIO_POLARITY_Pos) & RT_GPIO_POLARITY_Msk) | ((sense << RT_GPIO_SENSE_Pos) & RT_GPIO_SENSE_Msk)) /*!< Bit mask of SENSE field. */
 
-#if defined (NRF52840_XXAA)
 #define ZJ_LED1    NRF_GPIO_PIN_MAP(0,13)
 #define ZJ_LED2    NRF_GPIO_PIN_MAP(0,14)
 #define ZJ_LED3    NRF_GPIO_PIN_MAP(0,15)
@@ -19,18 +18,6 @@
 #define ZJ_KEY2    NRF_GPIO_PIN_MAP(0,12)
 #define ZJ_KEY3    NRF_GPIO_PIN_MAP(0,13)
 #define ZJ_KEY4    NRF_GPIO_PIN_MAP(0,14)
-#elif defined (NRF52832_XXAA) || defined (NRF52832_XXAB)
-#define ZJ_LED1    NRF_GPIO_PIN_MAP(0,17)
-#define ZJ_LED2    NRF_GPIO_PIN_MAP(0,18)
-#define ZJ_LED3    NRF_GPIO_PIN_MAP(0,19)
-#define ZJ_LED4    NRF_GPIO_PIN_MAP(0,20)
-
-#define ZJ_KEY1    NRF_GPIO_PIN_MAP(0,13)
-#define ZJ_KEY2    NRF_GPIO_PIN_MAP(0,14)
-#define ZJ_KEY3    NRF_GPIO_PIN_MAP(0,15)
-#define ZJ_KEY4    NRF_GPIO_PIN_MAP(0,16)
-#endif
-
 
 #endif
 

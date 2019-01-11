@@ -1,13 +1,5 @@
-[toc]
-
 # ZJ-SDK-RT-Thread-nRF52840
 基于RT-Thread操作系统在子敬电子ZJ-曹孟德nRF52840开发板上的软件开发包
-
-## 代码库
-1. Github 
-[https://github.com/ZJ-TEK/ZJ-SDK-RT-Thread-NORDIC](https://github.com/ZJ-TEK/ZJ-SDK-RT-Thread-NORDIC)
-2. Gitee
-[https://gitee.com/ZJ-TEK/ZJ-SDK-RT-Thread-NORDIC](https://gitee.com/ZJ-TEK/ZJ-SDK-RT-Thread-NORDIC)
 
 ## SDK介绍
 1. ZJ-SDK开发包使用的RT-Thread V4.0内核 [https://github.com/RT-Thread/rt-thread](https://github.com/RT-Thread/rt-thread) 

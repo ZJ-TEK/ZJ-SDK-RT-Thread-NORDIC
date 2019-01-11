@@ -979,8 +979,8 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>..\..\..\NORDIC_SDK\components\softdevice\s140\hex\</OutputDirectory>
-          <OutputName>s140_nrf52_6.0.0_softdevice.hex</OutputName>
+          <OutputDirectory>..\..\..\NORDIC_SDK\components\softdevice\s132\hex\</OutputDirectory>
+          <OutputName>s132_nrf52_6.0.0_softdevice.hex</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>

@@ -2960,7 +2960,7 @@
 // <4=> Read4IO 
 
 #ifndef NRFX_QSPI_CONFIG_READOC
-#define NRFX_QSPI_CONFIG_READOC 0
+#define NRFX_QSPI_CONFIG_READOC 4
 #endif
 
 // <o> NRFX_QSPI_CONFIG_WRITEOC  - Number of data lines and opcode used for writing.
@@ -2971,7 +2971,7 @@
 // <3=> PP4IO 
 
 #ifndef NRFX_QSPI_CONFIG_WRITEOC
-#define NRFX_QSPI_CONFIG_WRITEOC 0
+#define NRFX_QSPI_CONFIG_WRITEOC 2
 #endif
 
 // <o> NRFX_QSPI_CONFIG_ADDRMODE  - Addressing mode.
@@ -3258,7 +3258,7 @@
 // <e> NRFX_SAADC_ENABLED - nrfx_saadc - SAADC peripheral driver
 //==========================================================
 #ifndef NRFX_SAADC_ENABLED
-#define NRFX_SAADC_ENABLED 0
+#define NRFX_SAADC_ENABLED 1
 #endif
 // <o> NRFX_SAADC_CONFIG_RESOLUTION  - Resolution
  
@@ -3268,7 +3268,7 @@
 // <3=> 14 bit 
 
 #ifndef NRFX_SAADC_CONFIG_RESOLUTION
-#define NRFX_SAADC_CONFIG_RESOLUTION 1
+#define NRFX_SAADC_CONFIG_RESOLUTION 3
 #endif
 
 // <o> NRFX_SAADC_CONFIG_OVERSAMPLE  - Sample period
@@ -3365,7 +3365,7 @@
 // <e> NRFX_SPIM_ENABLED - nrfx_spim - SPIM peripheral driver
 //==========================================================
 #ifndef NRFX_SPIM_ENABLED
-#define NRFX_SPIM_ENABLED 0
+#define NRFX_SPIM_ENABLED 1
 #endif
 // <q> NRFX_SPIM0_ENABLED  - Enable SPIM0 instance
  
@@ -3392,14 +3392,14 @@
  
 
 #ifndef NRFX_SPIM3_ENABLED
-#define NRFX_SPIM3_ENABLED 0
+#define NRFX_SPIM3_ENABLED 1
 #endif
 
 // <q> NRFX_SPIM_EXTENDED_ENABLED  - Enable extended SPIM features
  
 
 #ifndef NRFX_SPIM_EXTENDED_ENABLED
-#define NRFX_SPIM_EXTENDED_ENABLED 0
+#define NRFX_SPIM_EXTENDED_ENABLED 1
 #endif
 
 // <o> NRFX_SPIM_MISO_PULL_CFG  - MISO pin pull configuration.
@@ -4984,7 +4984,7 @@
 // <4=> Read4IO 
 
 #ifndef QSPI_CONFIG_READOC
-#define QSPI_CONFIG_READOC 0
+#define QSPI_CONFIG_READOC 4
 #endif
 
 // <o> QSPI_CONFIG_WRITEOC  - Number of data lines and opcode used for writing.
@@ -4995,7 +4995,7 @@
 // <3=> PP4IO 
 
 #ifndef QSPI_CONFIG_WRITEOC
-#define QSPI_CONFIG_WRITEOC 0
+#define QSPI_CONFIG_WRITEOC 2
 #endif
 
 // <o> QSPI_CONFIG_ADDRMODE  - Addressing mode.
@@ -5036,7 +5036,7 @@
 // <15=> 32MHz/16 
 
 #ifndef QSPI_CONFIG_FREQUENCY
-#define QSPI_CONFIG_FREQUENCY 15
+#define QSPI_CONFIG_FREQUENCY 0
 #endif
 
 // <s> QSPI_PIN_SCK - SCK pin value.
@@ -5191,7 +5191,7 @@
 // <e> SAADC_ENABLED - nrf_drv_saadc - SAADC peripheral driver - legacy layer
 //==========================================================
 #ifndef SAADC_ENABLED
-#define SAADC_ENABLED 0
+#define SAADC_ENABLED 1
 #endif
 // <o> SAADC_CONFIG_RESOLUTION  - Resolution
  
@@ -5201,7 +5201,7 @@
 // <3=> 14 bit 
 
 #ifndef SAADC_CONFIG_RESOLUTION
-#define SAADC_CONFIG_RESOLUTION 1
+#define SAADC_CONFIG_RESOLUTION 3
 #endif
 
 // <o> SAADC_CONFIG_OVERSAMPLE  - Sample period
@@ -5322,82 +5322,6 @@
 #ifndef SPIS2_ENABLED
 #define SPIS2_ENABLED 0
 #endif
-
-// </e>
-
-// <e> SPI_ENABLED - nrf_drv_spi - SPI/SPIM peripheral driver - legacy layer
-//==========================================================
-#ifndef SPI_ENABLED
-#define SPI_ENABLED 0
-#endif
-// <o> SPI_DEFAULT_CONFIG_IRQ_PRIORITY  - Interrupt priority
- 
-
-// <i> Priorities 0,2 (nRF51) and 0,1,4,5 (nRF52) are reserved for SoftDevice
-// <0=> 0 (highest) 
-// <1=> 1 
-// <2=> 2 
-// <3=> 3 
-// <4=> 4 
-// <5=> 5 
-// <6=> 6 
-// <7=> 7 
-
-#ifndef SPI_DEFAULT_CONFIG_IRQ_PRIORITY
-#define SPI_DEFAULT_CONFIG_IRQ_PRIORITY 7
-#endif
-
-// <o> NRF_SPI_DRV_MISO_PULLUP_CFG  - MISO PIN pull-up configuration.
- 
-// <0=> NRF_GPIO_PIN_NOPULL 
-// <1=> NRF_GPIO_PIN_PULLDOWN 
-// <3=> NRF_GPIO_PIN_PULLUP 
-
-#ifndef NRF_SPI_DRV_MISO_PULLUP_CFG
-#define NRF_SPI_DRV_MISO_PULLUP_CFG 1
-#endif
-
-// <e> SPI0_ENABLED - Enable SPI0 instance
-//==========================================================
-#ifndef SPI0_ENABLED
-#define SPI0_ENABLED 0
-#endif
-// <q> SPI0_USE_EASY_DMA  - Use EasyDMA
- 
-
-#ifndef SPI0_USE_EASY_DMA
-#define SPI0_USE_EASY_DMA 1
-#endif
-
-// </e>
-
-// <e> SPI1_ENABLED - Enable SPI1 instance
-//==========================================================
-#ifndef SPI1_ENABLED
-#define SPI1_ENABLED 0
-#endif
-// <q> SPI1_USE_EASY_DMA  - Use EasyDMA
- 
-
-#ifndef SPI1_USE_EASY_DMA
-#define SPI1_USE_EASY_DMA 1
-#endif
-
-// </e>
-
-// <e> SPI2_ENABLED - Enable SPI2 instance
-//==========================================================
-#ifndef SPI2_ENABLED
-#define SPI2_ENABLED 0
-#endif
-// <q> SPI2_USE_EASY_DMA  - Use EasyDMA
- 
-
-#ifndef SPI2_USE_EASY_DMA
-#define SPI2_USE_EASY_DMA 1
-#endif
-
-// </e>
 
 // </e>
 
@@ -5586,7 +5510,7 @@
 // <e> TWI_ENABLED - nrf_drv_twi - TWI/TWIM peripheral driver - legacy layer
 //==========================================================
 #ifndef TWI_ENABLED
-#define TWI_ENABLED 0
+#define TWI_ENABLED 1
 #endif
 // <o> TWI_DEFAULT_CONFIG_FREQUENCY  - Frequency
  
@@ -5626,19 +5550,19 @@
 // <7=> 7 
 
 #ifndef TWI_DEFAULT_CONFIG_IRQ_PRIORITY
-#define TWI_DEFAULT_CONFIG_IRQ_PRIORITY 7
+#define TWI_DEFAULT_CONFIG_IRQ_PRIORITY 6
 #endif
 
 // <e> TWI0_ENABLED - Enable TWI0 instance
 //==========================================================
 #ifndef TWI0_ENABLED
-#define TWI0_ENABLED 0
+#define TWI0_ENABLED 1
 #endif
 // <q> TWI0_USE_EASY_DMA  - Use EasyDMA (if present)
  
 
 #ifndef TWI0_USE_EASY_DMA
-#define TWI0_USE_EASY_DMA 0
+#define TWI0_USE_EASY_DMA 1
 #endif
 
 // </e>
