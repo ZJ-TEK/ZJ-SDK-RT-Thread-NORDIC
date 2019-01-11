@@ -22,7 +22,6 @@
 #include <rtthread.h>
 #include <rtdevice.h>
 #include <rthw.h>
-#include "nrf52840.h"
 #include "core_cm4.h"
 #include "nrf_log.h"
 #include "nrf_log_ctrl.h"
@@ -81,8 +80,11 @@ static int _nrf_pin_read(struct rt_device *device, rt_base_t pin)
 {
    return nrf_gpio_pin_read(pin);
 }
-
+#if defined (NRF52840_XXAA)
 struct rt_pin_irq_hdr pin_irq_hdr_tab[P0_PIN_NUM+P1_PIN_NUM] =
+#elif defined (NRF52832_XXAA) || defined (NRF52832_XXAB)
+struct rt_pin_irq_hdr pin_irq_hdr_tab[P0_PIN_NUM] =
+#endif
 {
     /*P0*/
     { -1, 0, RT_NULL, RT_NULL},
@@ -119,6 +121,7 @@ struct rt_pin_irq_hdr pin_irq_hdr_tab[P0_PIN_NUM+P1_PIN_NUM] =
     { -1, 0, RT_NULL, RT_NULL},
     { -1, 0, RT_NULL, RT_NULL},
 
+#if defined (NRF52840_XXAA)
     /*P1*/
     { -1, 0, RT_NULL, RT_NULL},
     { -1, 0, RT_NULL, RT_NULL},
@@ -136,6 +139,7 @@ struct rt_pin_irq_hdr pin_irq_hdr_tab[P0_PIN_NUM+P1_PIN_NUM] =
     { -1, 0, RT_NULL, RT_NULL},
     { -1, 0, RT_NULL, RT_NULL},
     { -1, 0, RT_NULL, RT_NULL},
+#endif
 };
 
 static rt_err_t _nrf_pin_attach_irq(struct rt_device *device, rt_int32_t pin,
@@ -292,8 +296,11 @@ void nrfx_gpiote_irq_handler(void)
         do
         {
             repeat = 0;
-
+#if defined (NRF52840_XXAA)
             for (i = 0; i < P0_PIN_NUM+P1_PIN_NUM; i++)  //所有的引脚进行遍历
+#elif defined (NRF52832_XXAA) || defined (NRF52832_XXAB)
+            for (i = 0; i < P0_PIN_NUM; i++)  //所有的引脚进行遍历
+#endif
             {
                 uint8_t           polarity_and_sense = (uint8_t)pin_irq_hdr_tab[i].mode;   //得到   i 号数组中存放的极性和 采样的触发条件
                 int16_t  pin           = pin_irq_hdr_tab[i].pin;   //得到引脚     带    port和 pin

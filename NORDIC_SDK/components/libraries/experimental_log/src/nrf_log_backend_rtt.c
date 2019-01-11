@@ -69,6 +69,8 @@ static void serial_tx(void const * p_context, char const * buffer, size_t len)
         uint32_t watchdog_counter = NRF_LOG_BACKEND_RTT_TX_RETRY_CNT;
         do
         {
+            SEGGER_RTT_SetTerminal(1);
+            SEGGER_RTT_WriteString(0,RTT_CTRL_TEXT_BRIGHT_WHITE);
             processed = SEGGER_RTT_WriteNoLock(0, &buffer[idx], len);
             idx += processed;
             len -= processed;
