@@ -13,7 +13,7 @@ extern int __bss_end__;
 #define NRF_HEAP_BEGIN   (&__bss_end__)
 #endif
 
-#define CHIP_HEAP_END       (NRF_HEAP_BEGIN + 20*1024)
+#define CHIP_HEAP_END       (NRF_HEAP_BEGIN + 5*1024)
 
 /**@brief Macro for converting milliseconds to ticks.  performing rounded integer division (as opposed to truncating the result)
  *
